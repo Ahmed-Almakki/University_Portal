@@ -8,9 +8,7 @@ User = get_user_model()
 
 class UserSerializer(serializers.ModelSerializer):
     """Serializer for the User model."""
-    role = serializers.StringRelatedField()
-
     class Meta:
         """Meta class for the UserSerializer."""
         model = User
-        fields = ['id', 'admission_year', 'student_id', 'role', 'username', 'email']
+        fields = ['id', 'role', 'email', 'first_name', 'last_name']
